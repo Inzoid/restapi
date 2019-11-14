@@ -94,8 +94,7 @@ class AuthController extends Controller
     }
 
     public function updateName(UpdateProfileRequest $request) 
-    {
-        
+    {  
         $cek = JWTAuth::parseToken()->authenticate();
         $user_id = $cek->id;
         $name = $request->name;
